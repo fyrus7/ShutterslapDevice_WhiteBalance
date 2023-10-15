@@ -1,8 +1,6 @@
 /*
  * Shutterslap Device | White Balance Sensor | Version 1.0
  * 
- * white balance meter
- * 
  * 1 Button operation
  * 
  * Component:
@@ -95,7 +93,6 @@ boolean MeteringState;
 
 
 float ct;
-float lux;
 
 
 class ColorSensor {
@@ -174,7 +171,7 @@ void loop () {
 
     rgb_sensor.getColorTemp();
 
-    /* delay(200); */
+    /* delay(200); */ // enable for 4 pin oled
   }
 
 
@@ -183,8 +180,6 @@ void loop () {
 // WHITE BALANCE DISPLAY
    display.drawRect(0, 1, 128, 15, WHITE);
    display.setTextSize(1);
-//   display.setCursor(27, 5);
-//   display.print(F("WHITE BALANCE"));
    display.setCursor(11, 5);
   display.println("SHUTTERSLAP DEVICE");
 
@@ -240,21 +235,9 @@ void loop () {
     display.setCursor(22, 51);
    display.print(F("PRESS TO START"));
    }
-   
-/*
-   display.setTextSize(1);
-   display.setCursor(4, 53);
-    if (rgb_sensor.lux > 9999) {
-   display.print(rgb_sensor.lux, 0);
-    } else {
-   display.print(rgb_sensor.lux, 1);
-    }
-    display.println(F("lx"));
-*/
-
     
    display.display();
-   /* delay(200); */
+   /* delay(200); */ // enable for 4 pin oled
   }
 
 
