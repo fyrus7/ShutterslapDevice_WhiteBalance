@@ -1,4 +1,4 @@
-# FyrusWB (White Balance Meter)
+# Shutterslap Device | White Balance Sensor
 White Balance Meter for Photography
 
 a simple White Balance meter with a simple coding
